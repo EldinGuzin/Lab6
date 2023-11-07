@@ -20,17 +20,30 @@ public class Main {
 //		swap(values,1,0);
 //		System.out.println(Arrays.toString(values));
 		
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("Values of the array: " + Arrays.toString(values));
-		System.out.println();
-		System.out.println("Enter searched number: ");
-		int searchedValue = scanner.nextInt();
-		System.out.println();
+//		Scanner scanner = new Scanner(System.in);
+//		System.out.println("Values of the array: " + Arrays.toString(values));
+//		System.out.println();
+//		System.out.println("Enter searched number: ");
+//		int searchedValue = scanner.nextInt();
+//		System.out.println();
+//		
+//		boolean result = BinarySearch.search(values, searchedValue);
+//		
+//		System.out.println(result);
 		
-		boolean result = BinarySearch.search(values, searchedValue);
+//		printElegantly(values);
 		
-		System.out.println(result);
+//		NightSky NightSky = new NightSky(0.1, 40, 10);
+//		NightSky.print();
+//		System.out.println("Number of stars " + NightSky.starsInLastPrint());
+//		System.out.println("");
+//		
+//		NightSky = new NightSky(0.2, 15, 6);
+//		NightSky.print();
+//		System.out.println("Number of stars: " + NightSky.starsInLastPrint());
 		
+		NightSky ns = new NightSky(0.1, 40, 10);
+		ns.printLine();
 	}
 
 	//1
@@ -94,5 +107,20 @@ public class Main {
 	}
 	
 	
+	public static void printElegantly(int[] array) {
+		
+		
+		int i = 0;
+		while(true) {
+			System.out.print(array[i]);
+			if(i < array.length-1) {
+				System.out.print(", ");
+				i++;
+			}
+			else {
+				break;
+			}
+		}
+	}
 	
 		}
