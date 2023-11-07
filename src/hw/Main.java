@@ -2,6 +2,7 @@ package hw;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Main {
 
@@ -10,11 +11,26 @@ public class Main {
 		
 		
 		
-		
+		//Here are all the test for all the methods
 		int[] values = {6,5,8,7,11};
 		//System.out.println("smallest: " + smallest(values));
 		//System.out.println("Index of the smallest: " + indexOfTheSmallest(values));
-		System.out.println(indexOfTheSmallestStartingFrom(values, 2));
+		//System.out.println(indexOfTheSmallestStartingFrom(values, 2));
+//		System.out.println(Arrays.toString(values));
+//		swap(values,1,0);
+//		System.out.println(Arrays.toString(values));
+		
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Values of the array: " + Arrays.toString(values));
+		System.out.println();
+		System.out.println("Enter searched number: ");
+		int searchedValue = scanner.nextInt();
+		System.out.println();
+		
+		boolean result = BinarySearch.search(values, searchedValue);
+		
+		System.out.println(result);
+		
 	}
 
 	//1
@@ -67,7 +83,15 @@ public class Main {
 		return result;
 	}
 	
+	//4
 	
+	public static void swap(int[] array, int index1, int index2) {
+		
+		int temp = array[index1];
+		array[index1] = array[index2];
+		array[index2] = temp;
+		
+	}
 	
 	
 	
