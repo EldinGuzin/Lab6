@@ -27,7 +27,7 @@ public class Library {
 		
 		return (ArrayList<Book>) library
 				.stream()
-				.filter(book -> book.title().equals(title) )
+				.filter(book -> StringUtils.included(book.title(), title ))
 				.collect(Collectors.toList());
 	}
 	
@@ -35,7 +35,7 @@ public class Library {
 		
 		return (ArrayList<Book>) library
 				.stream()
-				.filter(book -> book.publisher().equals(publisher))
+				.filter(book -> StringUtils.included(book.publisher(), publisher))
 				.collect(Collectors.toList());
 	}
 	
@@ -47,6 +47,11 @@ public class Library {
 				.collect(Collectors.toList());
 		
 	}
+	
+	
+	
+	
+	
 	
 	
 }
